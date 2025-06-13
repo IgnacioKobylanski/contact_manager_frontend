@@ -1,0 +1,8 @@
+<div class="contact-list-container">
+  <h2>Lista de Contactos</h2>
+  <ul>
+    <li *ngFor="let contact of contacts">
+      <strong>{{ contact.name }}</strong> — {{ contact.email }} — {{ contact.phone }}
+    </li>
+  </ul>
+</div>
