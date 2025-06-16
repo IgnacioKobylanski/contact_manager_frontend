@@ -1,0 +1,26 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--primary);
+  color: white;
+  background-color: var( --primary-color);
+  height: 10vh;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.logo img{
+  height: 5rem;
+  width: auto;
+  max-width: 7.5rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+}
