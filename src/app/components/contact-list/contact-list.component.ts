@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact-list',
-  standalone: true,           // <-- Agregado
-  imports: [CommonModule],    // <-- Agregado para usar *ngFor
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './contact-list.component.html',
   styleUrls: ['./contact-list.component.scss']
 })
