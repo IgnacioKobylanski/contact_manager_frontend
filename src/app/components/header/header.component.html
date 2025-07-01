@@ -1,6 +1,13 @@
 <header class="header">
+  
     <div class="logo">
       <img src="assets/contact-manager-logo.png" alt="contact-manager-logo">
       Contact Manager
     </div>
+
+    <div class="actions" *ngIf="isLoggedIn">
+      <button (click)="logout()">Lougout</button>
+    </div>
+
+
   </header>
