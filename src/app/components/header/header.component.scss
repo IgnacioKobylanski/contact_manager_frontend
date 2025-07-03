@@ -44,3 +44,18 @@
     outline-offset: 2px;
   }
 }
+@media (max-width: 480px) {
+  .actions button {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+}

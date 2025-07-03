@@ -1,0 +1,28 @@
+<div class="profile-text">
+  <h3>Welcome Back!</h3>
+  <div class="underline"></div>
+  <p>Choose an action below to add, search, or delete contacts easily.</p>
+</div>
+
+<div class="profile-options-container">
+  <app-option
+    icon="add"
+    label="Add Contact"
+    bgColor="#28A745"
+    (selected)="addContact()"
+  ></app-option>
+
+  <app-option
+    icon="search"
+    label="Search Contact"
+    bgColor="#007BFF"
+    (selected)="searchContact()"
+  ></app-option>
+
+  <app-option
+    icon="delete"
+    label="Delete Contact"
+    bgColor="#DC3545"
+    (selected)="deleteContact()"
+  ></app-option>
+</div>
