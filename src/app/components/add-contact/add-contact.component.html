@@ -1,0 +1,36 @@
+<div class="add-contact-container">
+  <h2>Add New Contact</h2>
+
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <label>
+      Name
+      <input type="text" formControlName="name" placeholder="Full Name" />
+    </label>
+    <div class="error" *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+      Name is required.
+    </div>
+
+    <label>
+      Email
+      <input type="email" formControlName="email" placeholder="Email Address" />
+    </label>
+    <div class="error" *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+      Enter a valid email.
+    </div>
+
+    <label>
+      Phone
+      <input type="text" formControlName="phone" placeholder="Phone Number" />
+    </label>
+
+    <label>
+      Company
+      <input type="text" formControlName="company" placeholder="Company Name" />
+    </label>
+
+    <button type="submit" [disabled]="contactForm.invalid">Add Contact</button>
+  </form>
+
+  <p class="message" *ngIf="message">{{ message }}</p>
+</div>
+<button type="button" class="back-button" (click)="goBack()">← Back to Menu</button>
