@@ -36,7 +36,8 @@ export class AddContactComponent {
 
     this.http.post('http://localhost:5000/contacts', contactData).subscribe({
       next: (res: any) => {
-        this.message = 'Contact added successfully with ID: ' + res.id;
+        console.log('New contact ID:', res.id);//mini test just in case
+        this.message = 'Contact added successfully!';
         this.contactForm.reset();
       },
       error: (err) => {
@@ -51,19 +52,3 @@ export class AddContactComponent {
     this.router.navigate(['/profile']);
   }
 }
-
-
-
-
-/* import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-add-contact',
-  imports: [],
-  templateUrl: './add-contact.component.html',
-  styleUrl: './add-contact.component.scss'
-})
-export class AddContactComponent {
-
-}
- */
