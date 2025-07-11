@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ContactService } from '../../services/contact.service';
+import { Contact } from '../../models/contact';
 
 @Component({
   selector: 'app-contact-list',
@@ -9,8 +11,13 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./contact-list.component.scss']
 })
 export class ContactListComponent {
-  contacts = [
-    { id: 1, name: 'Juan Pérez', email: 'juan@example.com', phone: '123456789' },
-    { id: 2, name: 'María López', email: 'maria@example.com', phone: '987654321' }
-  ];
+  contacts: Contact[] = [];
+
+  constructor(private contactService: ContactService) {}
+
+  ngOnInit() {
+    this.contactService.getContacts().subscribe(data => {
+      this.contacts = data;
+    });
+  }
 }

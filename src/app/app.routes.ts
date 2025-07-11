@@ -3,6 +3,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { LoginComponent } from './components/login/login.component';
 import { AddContactComponent } from './components/add-contact/add-contact.component';
+import { ContactsPageComponent } from './pages/contacts-page/contacts-page.component';
 
 export const routes: Routes = [
   {
@@ -13,6 +14,7 @@ export const routes: Routes = [
       { path: 'login', component: LoginComponent },
       { path: 'profile', component: ProfileComponent },
       { path: 'add-contact', component: AddContactComponent },
+      { path: 'search-contact', component: ContactsPageComponent },
     ]
   },
   { path: '**', redirectTo: 'login' } 
