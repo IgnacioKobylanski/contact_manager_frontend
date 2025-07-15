@@ -3,12 +3,12 @@ import { ContactService } from '../../services/contact.service';
 import { Contact } from '../../models/contact';
 import { SearchContactsComponent } from '../../components/search-contacts/search-contacts.component';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contacts-page',
   standalone: true,
-  imports: [CommonModule, SearchContactsComponent],
+  imports: [CommonModule, SearchContactsComponent, RouterModule],
   templateUrl: './contacts-page.component.html',
   styleUrls: ['./contacts-page.component.scss']
 })

@@ -10,6 +10,7 @@
     <p><strong>Email:</strong> {{ contact.email }}</p>
     <p><strong>Phone:</strong> {{ contact.phone || 'N/A' }}</p>
     <p><strong>Company:</strong> {{ contact.company || 'N/A' }}</p>
+    <button class="edit-button" [routerLink]="['/contacts/edit', contact.id]">Edit</button>
   </div>
 </div>
 <button type="button" class="back-button" (click)="goBack()">← Back to Menu</button>
