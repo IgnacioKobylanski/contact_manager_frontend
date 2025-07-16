@@ -5,6 +5,7 @@ import { LoginComponent } from './components/login/login.component';
 import { AddContactComponent } from './components/add-contact/add-contact.component';
 import { ContactsPageComponent } from './pages/contacts-page/contacts-page.component';
 import { EditContactComponent } from './pages/edit-contact/edit-contact.component';
+import { DeleteContactComponent } from './pages/delete-contact/delete-contact.component';
 
 export const routes: Routes = [
   {
@@ -17,6 +18,7 @@ export const routes: Routes = [
       { path: 'add-contact', component: AddContactComponent },
       { path: 'search-contact', component: ContactsPageComponent },
       { path: 'contacts/edit/:id', component:EditContactComponent},
+      { path: 'delete-contact', component:DeleteContactComponent},
     ]
   },
   { path: '**', redirectTo: 'login' } 
